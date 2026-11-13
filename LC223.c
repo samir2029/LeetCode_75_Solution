@@ -1,2 +1,1 @@
-
-solution .Leetcode 
+Leetcode
