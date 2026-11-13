@@ -1,1 +1,1 @@
-Leetcode new
+Leetcode new solution
