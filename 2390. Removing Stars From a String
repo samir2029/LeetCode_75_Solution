@@ -1,0 +1,28 @@
+char* removeStars(char* s) {
+
+    int i=0, j=0, length=0;
+    char *new;
+
+    new = (char*) malloc (1000000 * sizeof(char));
+
+    while(s[j]!='\0'){
+        
+        if(s[j]=='*'){
+            
+            i=i-1;
+            new[i]='\0';
+            j++;
+        }
+        
+        else{
+            new[i]=s[j];
+            i++;
+            j++;
+
+        }
+        }
+        
+        new[i]='\0';
+        
+        return new;
+}
