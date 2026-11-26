@@ -11,7 +11,7 @@ int maxArea(int* height, int heightSize) {
             length=height[i];
              j--;
              
-             }
+             } /////  name samir   
              
              else if(height[i]<height[j]){ 
                 length=height[i];
