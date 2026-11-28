@@ -1,0 +1,60 @@
+char * mergeAlternately(char * word1, char * word2 ){
+    
+    long int i=0, l1=0, l2=0;
+    int k=0, p1=0, p2=0;
+    int m=0, less=0;
+    char* str;
+    
+    while(word1[i]!='\0'){
+        l1++;
+        i++;
+        }
+        
+        while(word2[m]!='\0'){
+            l2++;
+            m++;
+            }
+            
+            str=(char*) malloc ((l1+l2 +1)* sizeof(char));
+            
+            if(l1==l2)
+            less=l1;
+            
+            else if(l1>l2){
+                less=l2;
+                p1++;
+                }
+                
+                else{
+                    less=l1;
+                    p2++;
+                    }
+                    
+                    for(int j=0; j<less; j++){
+                        str[k] = word1[j];
+                        k++;
+                        str[k] = word2[j];
+                        k++;
+                        }
+                        
+                        if(p1==1){
+                            
+                            for(int j=less; j<l1; j++){
+                                str[k]=word1[j];
+                                k++;
+                                }
+                                }
+                                
+                                else if(p2==1){
+                                    
+                                    for(int j=less; j<l2; j++){
+                                        str[k]=word2[j];
+                                        k++;
+                                        }
+                                        }
+                                        
+                                        str[k]='\0';
+                                        
+                                         return str;
+                                         
+                                         }
