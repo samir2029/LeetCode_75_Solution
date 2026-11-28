@@ -1,0 +1,45 @@
+int longestOnes(int* nums, int numsSize, int k) {
+
+    int i=0, j=0, one=0, zero=0;
+    int T_one=0;
+    int T_o_max=0;
+
+    while(j<numsSize){
+
+        if(nums[j]==1){
+            one++;
+            j++;
+        }
+
+        else{
+            zero++;
+            j++;
+        }
+
+        T_one = one + (zero);
+        
+        if(zero > k ){
+
+            T_one = one + (zero-1);
+
+            if(nums[i]==0){  
+            zero--;
+            i++;
+
+            }
+
+            else{  
+            i++;
+            one--;
+            j--;
+            zero--;
+            }
+        }
+
+        if(T_o_max < T_one)
+        T_o_max=T_one;
+
+    }
+
+    return T_o_max; 
+}
